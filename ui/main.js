@@ -21,8 +21,7 @@ button.onclick = function(){
         //Not yet done
         
     };
-    
-    
+
     //make the request
     request.open('GET','http://amitagarwalaa57.imad.hasura-app.io/counter',true);
     request.send(null);
