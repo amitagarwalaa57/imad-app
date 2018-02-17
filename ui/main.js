@@ -21,8 +21,6 @@ button.onclick = function(){
         //Not yet done
         
     };
-        
-    
     
     
     //make the request
