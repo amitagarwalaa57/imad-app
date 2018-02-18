@@ -14,6 +14,18 @@ app.get('/counter', function (req, res){
     res.send(counter.toString());
     
 });
+var names = [];
+app.get('/submit-name',function(req,res){//url:submit-name?name =xxx
+    
+    var name = req.query.name;
+    //get the name from request object
+
+    names.push(name);
+    
+    //JSON JAVASCRIPT OBJECT NOTATION
+    res.send(JSON.stringify(names));//TODO
+    
+});
 
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
@@ -40,18 +52,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-var names = [];
-app.get('/submit-name',function(req,res){//url:submit-name?name =xxx
-    
-    var name = req.query.name;
-    //get the name from request object
 
-    names.push(name);
-    
-    //JSON JAVASCRIPT OBJECT NOTATION
-    res.send(JSON.stringify(names));//TODO
-    
-});
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
