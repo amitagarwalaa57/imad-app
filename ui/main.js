@@ -64,6 +64,6 @@ var name = nameInput.value;
     request.send(null);
     
         
-    }
+    };
     
 };
