@@ -29,7 +29,7 @@ button.onclick = function(){
 //submit name
 
 
-var submit = document.getElementById('submit_btn');
+var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
     //make a request to the server and send the names
     //create a request object
@@ -58,7 +58,7 @@ submit.onclick = function(){
         //Not done yet
     }
     //Make the request
-    var nameInput = document.getElementById('name');
+    var nameInput = document.getElementById("name");
     var name = nameInput.value;
     request.open('GET', 'http://amitagarwalaa57.imad.hasura-app.io/submit-name?name=' + name ,true);
     request.send(null);
