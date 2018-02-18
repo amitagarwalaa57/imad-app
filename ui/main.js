@@ -1,28 +1,27 @@
-//counter code
+//count code
 var button = document.getElementById('counter');
 
-
 button.onclick = function(){
-    //Make a request object
+    //create a request object
     
     var request = new XMLHttpRequest();
+    
     //capture the response and store it in a variable
     
     request.onreadystatechange = function(){
-        if(request.readystate == XMLHttpRequest.DONE){
+        if(request.readystate === XMLHttpRequest.DONE){
             //Take action
-            if(request.status == 200){
+            
+            if(request.status === 200){
                 var counter = request.responseText;
                 var span = document.getElementById('count');
-                 span.innerHTML = counter.toString();
+                span.innerHTML = counter.toString();
             }
-            
         }
-        //Not yet done
-        
+        //Not done yet
     };
-    //make the request
-    request.open('GET','http://amitagarwalaa57.imad.hasura-app.io/counter',true);
-    request.send(null);
+    //Make the request
     
+    request.open('GET', 'http://amitagarwalaa57.imad.hasura-app.io/counter' ,true);
+    request.send(null);
 };
