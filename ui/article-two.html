@@ -1,10 +1,12 @@
 <html>
 <head>
-<h1 align ="center">Random Number Guessing Game</h1>
+<h1 align = "center">Random Number Guessing Game</h1>
+<style type = "text/CSS">
+background-color = green;
+</style>
 </head>
 
 <body>
-    background-color:lightblue;
 <script>
 var randomNumber = Math.floor(Math.random() * 6 ) + 1;
 
@@ -16,7 +18,7 @@ if (parseInt(guess) === randomNumber ) {
   
 }  else {
 
-  document.write('<p align = "center">Sorry. The number was ' + randomNumber + '</p>');
+  document.write('<p align="center">Sorry. The number was ' + randomNumber + '</p>');
 
 }
 </script>
