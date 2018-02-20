@@ -2,8 +2,7 @@
 <head>
 <h1 align = "center">Random Number Guessing Game</h1>
 </head>
-
-<body>
+<body bgcolor="#E6E6FA">
 <script>
 var randomNumber = Math.floor(Math.random() * 6 ) + 1;
 
@@ -11,7 +10,7 @@ var guess = prompt('I am thinking of a random number between 1 and 6. What is it
 
 if (parseInt(guess) === randomNumber ) {
 
-  document.write('<p>You guessed the number!</p>');
+  document.write('<p align ="center">You guessed the number!</p>');
   
 }  else {
 
