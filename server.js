@@ -15,9 +15,6 @@ app.get('/counter', function (req, res){
     
 });
 
-
-
-
 var names = [];
 app.get('/submit-name',function(req,res){//url:submit-name?name =xxx
     
