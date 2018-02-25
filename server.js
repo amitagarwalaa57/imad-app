@@ -9,7 +9,7 @@ var config = {
     port: '5432',
     password: process.env.DB_PASSWORD
 };
-
+pg.defaults.ssl = true;
 
 var app = express();
 app.use(morgan('combined'));
