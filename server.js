@@ -78,13 +78,14 @@ app.post('/login', function (req, res) {
                 //Match the password
                 var dbString = result.rows[0].password;
                 var salt = dbString.split('$')[2];
-                var hashedPassword = hash(password, salt);//creating a hash based on password submitted with original salt
+                var hashedPassword = hash(password, salt);
+                //creating a hash based on password submitted with original salt
                 if(hashedPassword === dbString){
                     //set the session value
                      req.session.auth = {userId: result.rows[0].id};
                      //set cookie with session id
                      //Internally on server side, it maps the session id to a object
-                     //{ auth: {userId}}
+                     //{ auth: {userId }}
                     
                     res.send('credentials correcr!');
                    
