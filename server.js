@@ -82,6 +82,9 @@ app.post('/login', function (req, res) {
                 if(hashedPassword === dbString){
                     //set the session value
                      req.session.auth = {userId: result.rows[0].id};
+                     //set cookie with session id
+                     //Internally on server side, it maps the session id to a object
+                     //{ auth: {userId}}
                     
                     res.send('credentials correcr!');
                    
@@ -97,7 +100,6 @@ app.post('/login', function (req, res) {
   });
   
 });
-
 
 app.get('/check-login', function (req, res) {
     if(req.session && req.session.auth && req.session.auth.userId){
