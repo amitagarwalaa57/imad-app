@@ -417,7 +417,7 @@ app.get('/articles/:articleName', function (req, res) {
 
     if (err) {
 
-        res.status(500).send(err.toString());
+        res.status(500).send(error.toString());
 
     } else {
 
